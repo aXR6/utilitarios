@@ -1,0 +1,22 @@
+echo -e "\033[1;31m[✔] Usando o IPv6 com o UFW (Opcional) \033[0m \033[1;31m \033[0m"
+cat >'/etc/default/ufw' <<EOT
+IPV6=yes
+
+EOT
+
+echo -e "\033[1;31m[✔] Configurando as políticas padrão \033[0m \033[1;31m \033[0m"
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+echo -e "\033[1;31m[✔] Permitindo as conexões via protocolo SSH \033[0m \033[1;31m \033[0m"
+sudo ufw allow ssh
+sudo ufw allow 22
+
+echo -e "\033[1;31m[✔] Habilitando o UFW \033[0m \033[1;31m \033[0m"
+sudo ufw enable
+
+echo -e "\033[1;31m[✔] Listando Pelo número da regra \033[0m \033[1;31m \033[0m"
+sudo ufw status numbered
+
+echo -e "\033[1;31m[✔] Verificando o status e as regras do UFW \033[0m \033[1;31m \033[0m"
+sudo ufw status verbose
