@@ -1,0 +1,134 @@
+echo -e "\033[1;31m[✔] Habilitando repositorios de terceitos \033[0m \033[1;31m \033[0m"
+apt update
+apt install -y software-properties-common
+apt-add-repository contrib
+apt-add-repository non-free
+
+echo -e "\033[1;31m[✔] Atualizando lista do repo... \033[0m \033[1;31m \033[0m"
+apt update
+
+echo -e "\033[1;31m[✔] Instalando atualizações... \033[0m \033[1;31m \033[0m"
+apt dist-upgrade -y
+
+echo -e "\033[1;31m[✔] Instalando componentes necessarios... \033[0m \033[1;31m \033[0m"
+apt install -y apt-transport-https wget ca-certificates gnupg2 wget git open-vm-tools dirmngr curl
+
+echo -e "\033[1;31m[✔] Instalando app necessarios... \033[0m \033[1;31m \033[0m"
+apt install -y apache2 php phpmyadmin mariadb-server mariadb-client && apt autoremove -y
+
+echo -e "\033[1;31m[✔] Configurando um nivel de segurança \033[0m \033[1;31m \033[0m"
+cat >'/etc/apache2/conf-available/security.conf' <<EOT
+# [...]
+
+# Changing the following options will not really affect the security of the
+# server, but might make attacks slightly more difficult in some cases.
+
+#
+# ServerTokens
+# This directive configures what you return as the Server HTTP response
+# Header. The default is 'Full' which sends information about the OS-Type
+# and compiled in modules.
+# Set to one of:  Full | OS | Minimal | Minor | Major | Prod
+# where Full conveys the most information, and Prod the least.
+#ServerTokens Minimal
+#ServerTokens OS
+#ServerTokens Full
+ServerTokens Prod
+
+#
+# Optionally add a line containing the server version and virtual host
+# name to server-generated pages (internal error documents, FTP directory
+# listings, mod_status and mod_info output etc., but not CGI generated
+# documents or custom error documents).
+# Set to "EMail" to also include a mailto: link to the ServerAdmin.
+# Set to one of:  On | Off | EMail
+#ServerSignature Off
+#ServerSignature On
+ServerSignature Off
+
+# [...]
+EOT
+
+echo -e "\033[1;31m[✔] Verificar que a sintaxe do ficheiro de configuração está correta \033[0m \033[1;31m \033[0m"
+apachectl -t
+
+echo -e "\033[1;31m[✔] Reiniciar o servidor apache2 \033[0m \033[1;31m \033[0m"
+systemctl restart apache2
+
+echo -e "\033[1;31m[✔] Em primeiro lugar deve ser ativado o módulo ssl \033[0m \033[1;31m \033[0m"
+a2enmod ssl
+
+echo -e "\033[1;31m[✔] Reiniciar o servidor apache2 \033[0m \033[1;31m \033[0m"
+systemctl restart apache2
+
+echo -e "\033[1;31m[✔] Durante a instalação do apache2 é criada uma configuração para acesso seguro (https) \033[0m \033[1;31m \033[0m"
+cat >'/etc/apache2/sites-available/default-ssl.conf' <<EOT
+# [...]
+
+                #   SSL Engine Switch:
+                #   Enable/Disable SSL for this virtual host.
+                SSLEngine on
+
+                #   A self-signed (snakeoil) certificate can be created by inst$
+                #   the ssl-cert package. See
+                #   /usr/share/doc/apache2/README.Debian.gz for more info.
+                #   If both key and certificate are stored in the same file, on$
+                #   SSLCertificateFile directive is needed.
+                # SSLCertificateFile      /etc/ssl/certs/ssl-cert-snakeoil.pem
+                # SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
+
+                # Certificados Let's Encrypt:
+                #SSLCertificateFile    /etc/letsencrypt/live/home.example.com/cert.pem
+                #SSLCertificateKeyFile /etc/letsencrypt/live/home.example.com/privkey.pem
+
+                # Certificados auto-assinados:
+                SSLCertificateFile     /etc/ssl/certs/server.crt
+                SSLCertificateKeyFile  /etc/ssl/private/server.key
+
+# [...]
+EOT
+
+echo -e "\033[1;31m[✔] O novo site também deve ser ativado \033[0m \033[1;31m \033[0m"
+a2ensite default-ssl
+apachectl -t
+
+echo -e "\033[1;31m[✔] Reiniciar o servidor apache2 \033[0m \033[1;31m \033[0m"
+systemctl restart apache2
+
+echo -e "\033[1;31m[✔] Reiniciar o servidor apache2 \033[0m \033[1;31m \033[0m"
+apt install -y certbot
+
+echo -e "\033[1;31m[✔] O certbot é um utilitário que facilita a emissão e renovação dos certificados Let’s Encrypt \033[0m \033[1;31m \033[0m"
+certbot certonly --non-interactive --standalone --agree-tos --email pinguim.ribeiro@gmail.com -d home.example.com
+
+echo -e "\033[1;31m[✔] cert.pem - O certificado para o nosso domínio \033[0m \033[1;31m \033[0m"
+echo -e "\033[1;31m[✔] chain.pem -	O certificado intermédio (Let's Encrypt) \033[0m \033[1;31m \033[0m"
+echo -e "\033[1;31m[✔] fullchain.pem - O nosso certificado (cert.pem) e o certificado intermédio (chain.pem) da Let’s Encrypt \033[0m \033[1;31m \033[0m"
+echo -e "\033[1;31m[✔] privkey.pem -	A chave privada do certificado \033[0m \033[1;31m \033[0m"
+
+clear
+
+echo -e "\033[1;31m[✔] CONFIGURANDO USUARIO E BANCO NO MARIADB (PROCEDIMENTO MANUAL) \033[0m \033[1;31m \033[0m"
+echo -e "\033[1;31m[✔] 1º - Acessando o MariaDB \033[0m \033[1;31m \033[0m"
+echo -e "\033[1;31m[✔] mysql -p -uroot \033[0m \033[1;31m \033[0m"
+echo ''
+
+echo -e "\033[1;31m[✔] 2º - Criando usuario \033[0m \033[1;31m \033[0m"
+echo -e "\033[1;31m[✔] CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypassword'; \033[0m \033[1;31m \033[0m"
+echo ''
+
+echo -e "\033[1;31m[✔] 3º - Concede todos os privilégios ao usuário \033[0m \033[1;31m \033[0m"
+echo -e "\033[1;31m[✔] GRANT ALL PRIVILEGES ON *.* TO 'myuser'@'localhost' IDENTIFIED BY 'mypassword'; \033[0m \033[1;31m \033[0m"
+echo ''
+
+echo -e "\033[1;31m[✔] 4º - Conceder privilégios a um banco de dados específico \033[0m \033[1;31m \033[0m"
+echo -e "\033[1;31m[✔] GRANT ALL PRIVILEGES ON 'DB1'.* TO 'user1'@'localhost'; \033[0m \033[1;31m \033[0m"
+echo ''
+
+echo -e "\033[1;31m[✔] 5º - Lembre-se de atualizar os privilégios \033[0m \033[1;31m \033[0m"
+echo -e "\033[1;31m[✔] FLUSH privileges; \033[0m \033[1;31m \033[0m"
+echo ''
+
+echo -e "\033[1;31m[✔] 6º - Para verificar as concessões do usuário no MariaDB \033[0m \033[1;31m \033[0m"
+echo -e "\033[1;31m[✔] SHOW GRANTS FOR 'myuser'@'locahost'; \033[0m \033[1;31m \033[0m"
+echo ''

@@ -1,2 +1,2 @@
 # utilitarios
-Material utilizado nas aulas
+Material para aula
