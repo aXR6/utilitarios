@@ -5,7 +5,7 @@ cat >'/etc/vsftpd.conf' <<EOT
 anonymous_enable=NO
 #
 # Uncomment this to allow local users to log in.
-
+ 
 local_enable=YES
 write_enable=YES
 chroot_local_user=YES
