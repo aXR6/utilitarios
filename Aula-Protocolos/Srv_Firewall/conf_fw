@@ -1,7 +1,9 @@
+echo -e "\033[1;31m[✔] Instalando o UFW \033[0m \033[1;31m \033[0m"
+apt install -y ufw
+
 echo -e "\033[1;31m[✔] Usando o IPv6 com o UFW (Opcional) \033[0m \033[1;31m \033[0m"
 cat >'/etc/default/ufw' <<EOT
 IPV6=yes
-
 EOT
 
 echo -e "\033[1;31m[✔] Configurando as políticas padrão \033[0m \033[1;31m \033[0m"
