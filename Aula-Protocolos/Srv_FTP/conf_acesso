@@ -49,22 +49,19 @@ EOT
 echo -e "\033[1;31m[✔] Reinicie o servidor para que as alterações entrem em vigor: \033[0m \033[1;31m \033[0m"
 sudo systemctl restart vsftpd
 
-echo -e "\033[1;31m[✔]   \033[0m \033[1;31m \033[0m"
-echo -e "\033[1;31m[✔]   \033[0m \033[1;31m \033[0m"
-echo -e "\033[1;31m[✔]   \033[0m \033[1;31m \033[0m"
-echo -e "\033[1;31m[✔]   \033[0m \033[1;31m \033[0m"
-echo -e "\033[1;31m[✔]   \033[0m \033[1;31m \033[0m"
-echo -e "\033[1;31m[✔]   \033[0m \033[1;31m \033[0m"
-echo -e "\033[1;31m[✔]   \033[0m \033[1;31m \033[0m"
-echo -e "\033[1;31m[✔]   \033[0m \033[1;31m \033[0m"
-echo -e "\033[1;31m[✔]   \033[0m \033[1;31m \033[0m"
-echo -e "\033[1;31m[✔]   \033[0m \033[1;31m \033[0m"
-echo -e "\033[1;31m[✔]   \033[0m \033[1;31m \033[0m"
-echo -e "\033[1;31m[✔]   \033[0m \033[1;31m \033[0m"
-echo -e "\033[1;31m[✔]   \033[0m \033[1;31m \033[0m"
-echo -e "\033[1;31m[✔]   \033[0m \033[1;31m \033[0m"
-echo -e "\033[1;31m[✔]   \033[0m \033[1;31m \033[0m"
-echo -e "\033[1;31m[✔]   \033[0m \033[1;31m \033[0m"
-echo -e "\033[1;31m[✔]   \033[0m \033[1;31m \033[0m"
-echo -e "\033[1;31m[✔]   \033[0m \033[1;31m \033[0m"
-echo -e "\033[1;31m[✔]   \033[0m \033[1;31m \033[0m"
+echo -e "\033[1;31m[✔] Abrindo um arquivo chamado ftponlyno bindiretório:  \033[0m \033[1;31m \033[0m"
+cat >'/bin/ftponly' <<EOT
+#!/bin/sh
+echo "This account is limited to FTP access only."
+EOT
+
+echo -e "\033[1;31m[✔] Alterando as permissões para tornar o arquivo executável:  \033[0m \033[1;31m \033[0m"
+sudo chmod a+x /bin/ftponly
+
+echo -e "\033[1;31m[✔] Abra a lista de shells válidos: \033[0m \033[1;31m \033[0m"
+cat >'/etc/shells' <<EOT
+/bin/ftponly
+EOT
+
+echo -e "\033[1;31m[✔] Na parte inferior adicione: \033[0m \033[1;31m \033[0m"
+sudo usermod tsc -s /bin/ftponly
