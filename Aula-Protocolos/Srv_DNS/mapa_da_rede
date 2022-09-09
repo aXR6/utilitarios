@@ -48,7 +48,6 @@ apt install -y bind9 bind9utils bind9-doc ufw
 5 - cd /etc/bind
 5.1 - ls -la
 
-
 (Verificando a sintaxe de configuração do BIND)
 named-checkconf 
 
