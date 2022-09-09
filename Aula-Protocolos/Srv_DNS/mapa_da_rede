@@ -28,8 +28,26 @@ Descrição:
 - O conteudo das pasta "Pasta_ETC-BIND_NS1" e "Pasta_ETC-BIND_NS2" devem ser extraidos dentro de cada servidor correspondente, dentro da pasta: /etc/bind;
 =====================================================================================
 NAS MAQUINAS SERVIDOR:
-Aplicações utilizadas nos servidores DNS:
+
+1 - mkdir /home/debian/user
+1.1 - cd /home/debian/user
+1.2 - git clone https://github.com.br/axr6/utilitarios
+
+2 - Aplicações utilizadas nos servidores DNS:
 apt install -y bind9 bind9utils bind9-doc ufw
+
+3 - cd /etc/bind
+3.1 - ls -la
+3.2 - mkdir /home/debian/backupbind
+3.3 - mv -R * /home/debian/backupbind
+
+4 - cd /home/debian/user/utilitarios/Aula-Protocolos/Srv_DNS/Pasta_ETC-BIND_NS1
+4.1 - ls -la
+4.2 - cp -R * /etc/bind
+
+5 - cd /etc/bind
+5.1 - ls -la
+
 
 (Verificando a sintaxe de configuração do BIND)
 named-checkconf 
