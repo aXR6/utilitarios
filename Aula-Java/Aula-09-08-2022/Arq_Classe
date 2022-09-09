@@ -32,4 +32,8 @@ public class Carro{
 	}
 
 	Carro ferrari= new carro();
+
+	ferrari.setCor('preto');
+
+	system.out.println(ferrari.getCor);
 }
