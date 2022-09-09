@@ -9,4 +9,26 @@ public class Carro{
 	void setTipo(string tipo){
 		this.tipo = tipo;
 	}
+	public string getTipo(){
+		return tipo = tipo;
+	}
+	public string setCor(string cor){
+		this.cor = cor;
+	}	
+	public string getCor(){
+		return cor = cor;
+	}
+	public string setPLaca(string placa){
+		return this.placa = placa;
+	}
+	public string getPlaca(){
+		return placa = placa;
+	}
+	public int setPortas(string portas){
+		return portas = portas
+	}
+	public string getPortas(){
+		return portas = portas;
+	}
+
 }
