@@ -31,4 +31,5 @@ public class Carro{
 		return portas = portas;
 	}
 
+	Carro ferrari= new carro();
 }
