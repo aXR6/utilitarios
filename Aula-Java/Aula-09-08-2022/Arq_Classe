@@ -1,0 +1,12 @@
+package Arq_Classe;
+
+public class Carro{
+	string tipo;
+	string cor;
+	string placa;
+	int portas;
+
+	void setTipo(string tipo){
+		this.tipo = tipo;
+	}
+}
