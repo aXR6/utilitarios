@@ -5,3 +5,11 @@ public class Java001{
 }
 
 
+public static Carro{
+
+    Carro ferrari = new Carro;
+
+    ferrari.setPortas(4)
+
+
+}
