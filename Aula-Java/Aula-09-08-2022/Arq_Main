@@ -9,7 +9,10 @@ public static Carro{
 
     Carro ferrari = new Carro;
 
-    ferrari.setPortas(4)
+    ferrari.setPortas(4);
+    ferrari.setTipo("cross");
+    ferrari.setCor("azul");
+    ferrari.setPlaca("psg 9i99");
 
 
-}
+}   
