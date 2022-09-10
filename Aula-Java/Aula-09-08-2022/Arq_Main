@@ -1,0 +1,7 @@
+public class Java001{
+    public static void main(string args[]){
+        system.out.println("helo ");
+    }
+}
+
+
