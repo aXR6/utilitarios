@@ -14,5 +14,13 @@ public static Carro{
     ferrari.setCor("azul");
     ferrari.setPlaca("psg 9i99");
 
+    System.out.printlin("Placa",ferrari.getplaca());
+    System.out.printlin("Tipo", ferrari.gettipo());
+    System.out.printlin("Portas", ferrari.getportas());
+    System.out.printlin("Cor", ferrari.getcor());
+
+
+
+
 
 }   
