@@ -1,22 +1,31 @@
-echo -e "\033[1;31m[✔] Habilitando repositorios de terceitos \033[0m \033[1;31m \033[0m"
+Habilitando repositorios de terceitos
+- Forma automatica?
 apt update
 apt install -y software-properties-common
 apt-add-repository contrib
 apt-add-repository non-free
 
-echo -e "\033[1;31m[✔] Atualizando lista do repo... \033[0m \033[1;31m \033[0m"
+- Forma manual:
+cd /etc/apt/
+ls -la 
+nano sources.list
+Obs.: Acrescencer na frente de "main" -> non-free contrib
+CTRL + S (salvar)
+CTRL + x (saiar)
+
+Atualizando lista do repo...
 apt update
 
-echo -e "\033[1;31m[✔] Instalando atualizações... \033[0m \033[1;31m \033[0m"
+Instalando atualizações...
 apt dist-upgrade -y
 
-echo -e "\033[1;31m[✔] Instalando componentes necessarios... \033[0m \033[1;31m \033[0m"
+Instalando componentes necessarios...
 apt install -y apt-transport-https wget ca-certificates gnupg2 wget git open-vm-tools dirmngr curl
 
-echo -e "\033[1;31m[✔] Instalando app necessarios... \033[0m \033[1;31m \033[0m"
+Instalando app necessarios...
 apt install -y apache2 php phpmyadmin mariadb-server mariadb-client && apt autoremove -y
 
-echo -e "\033[1;31m[✔] Configurando um nivel de segurança \033[0m \033[1;31m \033[0m"
+Configurando um nivel de segurança
 cat >'/etc/apache2/conf-available/security.conf' <<EOT
 # [...]
 
@@ -49,19 +58,19 @@ ServerSignature Off
 # [...]
 EOT
 
-echo -e "\033[1;31m[✔] Verificar que a sintaxe do ficheiro de configuração está correta \033[0m \033[1;31m \033[0m"
+Verificar que a sintaxe do ficheiro de configuração está correta
 apachectl -t
 
-echo -e "\033[1;31m[✔] Reiniciar o servidor apache2 \033[0m \033[1;31m \033[0m"
+Reiniciar o servidor apache2
 systemctl restart apache2
 
-echo -e "\033[1;31m[✔] Em primeiro lugar deve ser ativado o módulo ssl \033[0m \033[1;31m \033[0m"
+Em primeiro lugar deve ser ativado o módulo ssl
 a2enmod ssl
 
-echo -e "\033[1;31m[✔] Reiniciar o servidor apache2 \033[0m \033[1;31m \033[0m"
+Reiniciar o servidor apache2
 systemctl restart apache2
 
-echo -e "\033[1;31m[✔] Durante a instalação do apache2 é criada uma configuração para acesso seguro (https) \033[0m \033[1;31m \033[0m"
+Durante a instalação do apache2 é criada uma configuração para acesso seguro (https)
 cat >'/etc/apache2/sites-available/default-ssl.conf' <<EOT
 # [...]
 
@@ -88,17 +97,17 @@ cat >'/etc/apache2/sites-available/default-ssl.conf' <<EOT
 # [...]
 EOT
 
-echo -e "\033[1;31m[✔] O novo site também deve ser ativado \033[0m \033[1;31m \033[0m"
+O novo site também deve ser ativado
 a2ensite default-ssl
 apachectl -t
 
-echo -e "\033[1;31m[✔] Reiniciar o servidor apache2 \033[0m \033[1;31m \033[0m"
+Reiniciar o servidor apache2
 systemctl restart apache2
 
-echo -e "\033[1;31m[✔] Reiniciar o servidor apache2 \033[0m \033[1;31m \033[0m"
+Reiniciar o servidor apache2
 apt install -y certbot
 
-echo -e "\033[1;31m[✔] O certbot é um utilitário que facilita a emissão e renovação dos certificados Let’s Encrypt \033[0m \033[1;31m \033[0m"
+O certbot é um utilitário que facilita a emissão e renovação dos certificados Let’s Encrypt \033[0m \033[1;31m \033[0m"
 certbot certonly --non-interactive --standalone --agree-tos --email pinguim.ribeiro@gmail.com -d home.example.com
 
 echo -e "\033[1;31m[✔] cert.pem - O certificado para o nosso domínio \033[0m \033[1;31m \033[0m"
