@@ -1,3 +1,5 @@
+# NOTA: Você pode realizar esses procedimentos em qualquer dispositivo que vc queira utilizar para sincronizar, via código, com o repositorio no GitHub.
+
 # Terminal
 # Para Windows com WSL:
 ```
@@ -39,9 +41,15 @@ MacOS: pbcopy < ~/.ssh/id_ed25519.pub
  - Clique em "Add SSH key" e pronto!
 ```
 
- Testando a conexão SSH
-```
+# Testando a conexão SSH
 # 5º Executar o seguinte comando: ssh -T git@github.com
+```
 Aguardar as mensagens. Digitar "yes" para continuar.
 Verifique se a mensagem resultante contém seu nome de usuário e o sucesso da sua autenticação.
 ```
+
+# FEITO TUDO ISSO... AGORA É SÓ PADRONIZAR A PASTA DE TRABALHO
+
+# 1º - Para baixar o repositorio: git clone URL_do_PROJETO
+
+# OBS.: O RESTANTE É ESTUDO!
