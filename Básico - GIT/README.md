@@ -4,6 +4,8 @@
 Para executar os comandos deste tutorial, você já deve ter o git instalado na máquina e utilizar o terminal "Git Bash".
 É possível também executar no "WSL Bash" caso você esteja utilizando a distro do Linux no Windows.
 ```
+
+# Para LINUX:
 ```
 Para Linux você só precisa ter o Git instalado e abrir o terminal.
 ```
