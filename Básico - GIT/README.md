@@ -53,3 +53,19 @@ Verifique se a mensagem resultante contém seu nome de usuário e o sucesso da s
 # 1º - Para baixar o repositorio: git clone URL_do_PROJETO
 
 # OBS.: O RESTANTE É ESTUDO!
+
+
+
+
+
+
+
+
+
+```
+Acesse:
+Thalles Canela - TSC
+Canal no YouTube: https://www.youtube.com/c/aXR6CyberSecurity
+Perfil no Github: https://github.com/aXR6/
+Fórum: https://forum.universodoti.com.br/
+```
