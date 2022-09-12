@@ -29,12 +29,17 @@ apt install -y apache2 php phpmyadmin mariadb-server mariadb-client && apt autor
 cat >'/etc/apache2/conf-available/security.conf' <<EOT
 
 #ServerTokens Minimal
+
 #ServerTokens OS
+
 #ServerTokens Full
+
 ServerTokens Prod
 
 #ServerSignature Off
+
 #ServerSignature On
+
 ServerSignature Off
 
 EOT
