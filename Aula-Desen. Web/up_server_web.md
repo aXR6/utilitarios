@@ -1,5 +1,5 @@
 # Habilitando repositorios de terceitos
-- Forma automatica? <br>
+- Forma automatica: <br>
 apt update <br>
 apt install -y software-properties-common <br>
 apt-add-repository contrib <br>
