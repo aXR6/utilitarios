@@ -1,17 +1,17 @@
 # Habilitando repositorios de terceitos
-- Forma automatica?
-apt update
-apt install -y software-properties-common
-apt-add-repository contrib
-apt-add-repository non-free
+- Forma automatica? <br>
+apt update <br>
+apt install -y software-properties-common <br>
+apt-add-repository contrib <br>
+apt-add-repository non-free <br>
 
-- Forma manual:
-cd /etc/apt/
-ls -la 
-nano sources.list
-Obs.: Acrescencer na frente de "main" -> non-free contrib
-CTRL + S (salvar)
-CTRL + x (saiar)
+- Forma manual: <br>
+cd /etc/apt/ <br>
+ls -la  <br>
+nano sources.list <br>
+Obs.: Acrescencer na frente de "main" -> non-free contrib <br>
+CTRL + S (salvar) <br>
+CTRL + x (saiar) <br>
 
 # Atualizando lista do repo...
 apt update
@@ -26,21 +26,15 @@ apt install -y apt-transport-https wget ca-certificates gnupg2 wget git open-vm-
 apt install -y apache2 php phpmyadmin mariadb-server mariadb-client && apt autoremove -y
 
 # Configurando um nivel de segurança
-cat >'/etc/apache2/conf-available/security.conf' <<EOT
+cat >'/etc/apache2/conf-available/security.conf' <<EOT <br>
 
-#ServerTokens Minimal
-
-#ServerTokens OS
-
-#ServerTokens Full
-
-ServerTokens Prod
-
-#ServerSignature Off
-
-#ServerSignature On
-
-ServerSignature Off
+#ServerTokens Minimal <br>
+#ServerTokens OS <br>
+#ServerTokens Full <br>
+ServerTokens Prod <br>
+#ServerSignature Off <br>
+#ServerSignature On <br>
+ServerSignature Off <br>
 
 EOT
 
@@ -82,8 +76,8 @@ cat >'/etc/apache2/sites-available/default-ssl.conf' <<EOT
 EOT
 
 # O novo site também deve ser ativado
-a2ensite default-ssl
-apachectl -t
+a2ensite default-ssl <br>
+apachectl -t <br>
 
 # Reiniciar o servidor apache2
 systemctl restart apache2
@@ -92,15 +86,15 @@ systemctl restart apache2
 apt install -y certbot
 
 # O certbot é um utilitário que facilita a emissão e renovação dos certificados Let’s Encrypt
-certbot certonly --non-interactive --standalone --agree-tos --email pinguim.ribeiro@gmail.com -d home.example.com
+certbot certonly --non-interactive --standalone --agree-tos --email pinguim.ribeiro@gmail.com -d home.example.com <br>
 
-cert.pem - O certificado para o nosso domínio
-chain.pem -	O certificado intermédio (Let's Encrypt)
-fullchain.pem - O nosso certificado (cert.pem) e o certificado intermédio (chain.pem) da Let’s Encrypt
-privkey.pem - A chave privada do certificado
+cert.pem - O certificado para o nosso domínio <br>
+chain.pem -	O certificado intermédio (Let's Encrypt) <br>
+fullchain.pem - O nosso certificado (cert.pem) e o certificado intermédio (chain.pem) da Let’s Encrypt<br>
+privkey.pem - A chave privada do certificado <br>
 
 # CONFIGURANDO USUARIO E BANCO NO MARIADB (PROCEDIMENTO MANUAL)
-1º - Acessando o MariaDB
+1º - Acessando o MariaDB <br>
 mysql -p -uroot
 
 # 2º - Criando usuario
