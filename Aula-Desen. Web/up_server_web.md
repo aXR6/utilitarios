@@ -28,33 +28,14 @@ apt install -y apache2 php phpmyadmin mariadb-server mariadb-client && apt autor
 # Configurando um nivel de segurança
 cat >'/etc/apache2/conf-available/security.conf' <<EOT
 # [...]
-
-# Changing the following options will not really affect the security of the
-# server, but might make attacks slightly more difficult in some cases.
-
-#
-# ServerTokens
-# This directive configures what you return as the Server HTTP response
-# Header. The default is 'Full' which sends information about the OS-Type
-# and compiled in modules.
-# Set to one of:  Full | OS | Minimal | Minor | Major | Prod
-# where Full conveys the most information, and Prod the least.
 #ServerTokens Minimal
 #ServerTokens OS
 #ServerTokens Full
 ServerTokens Prod
 
-#
-# Optionally add a line containing the server version and virtual host
-# name to server-generated pages (internal error documents, FTP directory
-# listings, mod_status and mod_info output etc., but not CGI generated
-# documents or custom error documents).
-# Set to "EMail" to also include a mailto: link to the ServerAdmin.
-# Set to one of:  On | Off | EMail
 #ServerSignature Off
 #ServerSignature On
 ServerSignature Off
-
 # [...]
 EOT
 
