@@ -26,7 +26,7 @@ apt install -y apt-transport-https wget ca-certificates gnupg2 wget git open-vm-
 apt install -y apache2 php phpmyadmin mariadb-server mariadb-client && apt autoremove -y
 
 # Configurando um nivel de segurança
-cat >'/etc/apache2/conf-available/security.conf' <<EOT <br>
+cat >'/etc/apache2/conf-available/security.conf' <<EOT
 
 #ServerTokens Minimal <br>
 #ServerTokens OS <br>
