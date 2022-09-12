@@ -5,6 +5,8 @@
 2.1 - Dentro do arquivo, criar a estrutura inicial do HTML5;
 2.2 - Alterar o titulo da página (pode ser seu nome);
 2.3 - Colocar um conteúdo no corpo da página;
+3 - Criar um arquivo de estilo em CSS
+3.1 - Inserior dentro do HTML
 2.4 - Enviar pro GITHUB;
 2.5 - Baixar via GIT CLONE no Servidor (Virtual);
 ```
@@ -15,3 +17,5 @@
 2º - git commit -m "Texto que marca exatamente a atualização feita" (Comentario para facilitar o versionamento)
 3º - git push (Enviando tudo que foi modificado para o GITHUB)
 ```
+
+# Obs.: Não precisa fazer o clone, pois aqui é um manual...

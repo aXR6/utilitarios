@@ -1,0 +1,1 @@
+# Cada aluno deve ter maquinas virtuais
