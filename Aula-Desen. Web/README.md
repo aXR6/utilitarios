@@ -7,7 +7,7 @@
 2.3 - Colocar um conteúdo no corpo da página;
 3 - Criar um arquivo de estilo em CSS
 3.1 - Inserior dentro do HTML
-2.4 - Enviar pro GITHUB;
+2.4 - Enviar pro GITHUB de vocês;
 2.5 - Baixar via GIT CLONE no Servidor (Virtual);
 ```
 
