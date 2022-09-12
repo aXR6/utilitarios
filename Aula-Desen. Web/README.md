@@ -9,8 +9,9 @@
 3.1 - Inserior dentro do HTML
 2.4 - Enviar pro GITHUB de vocês;
 2.5 - Baixar via GIT CLONE no Servidor (Virtual);
+3 - 
 ```
-
+ 
 # Enviando o arquivo para o GIT (Suponto que você já visitou a pasta "Básico - GIT")
 ```
 1º - git add . (adiciona tudo que foi modicado e que irá para o GITHUB)
