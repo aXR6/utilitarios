@@ -58,7 +58,6 @@ systemctl restart apache2
 
 # Durante a instalação do apache2 é criada uma configuração para acesso seguro (https)
 cat >'/etc/apache2/sites-available/default-ssl.conf' <<EOT
-# [...]
 
                 #   SSL Engine Switch:
                 #   Enable/Disable SSL for this virtual host.
@@ -80,7 +79,6 @@ cat >'/etc/apache2/sites-available/default-ssl.conf' <<EOT
                 SSLCertificateFile     /etc/ssl/certs/server.crt
                 SSLCertificateKeyFile  /etc/ssl/private/server.key
 
-# [...]
 EOT
 
 # O novo site também deve ser ativado
