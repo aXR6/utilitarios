@@ -95,14 +95,9 @@ apt install -y certbot
 certbot certonly --non-interactive --standalone --agree-tos --email pinguim.ribeiro@gmail.com -d home.example.com
 
 cert.pem - O certificado para o nosso domínio
-
 chain.pem -	O certificado intermédio (Let's Encrypt)
-
 fullchain.pem - O nosso certificado (cert.pem) e o certificado intermédio (chain.pem) da Let’s Encrypt
-
 privkey.pem - A chave privada do certificado
-
-clear
 
 # CONFIGURANDO USUARIO E BANCO NO MARIADB (PROCEDIMENTO MANUAL)
 1º - Acessando o MariaDB
