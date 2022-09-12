@@ -27,6 +27,7 @@ apt install -y apache2 php phpmyadmin mariadb-server mariadb-client && apt autor
 
 # Configurando um nivel de segurança
 cat >'/etc/apache2/conf-available/security.conf' <<EOT
+
 #ServerTokens Minimal
 #ServerTokens OS
 #ServerTokens Full
