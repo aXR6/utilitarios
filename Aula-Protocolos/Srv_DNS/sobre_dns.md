@@ -14,15 +14,15 @@ DNS recursivo: geralmente, os clientes não fazem consultas diretamente para os 
 # Como o DNS direciona o tráfego para a sua aplicação web?
 O diagrama a seguir disponibiliza uma visão geral sobre como os serviços DNS recursivos e autoritativos funcionam em conjunto para direcionar um usuário final para o seu site ou a sua aplicação.
 
-1 - Um usuário abre um navegador, digita www.exemplo.com na barra de endereços e aperta Enter.
-2 - A solicitação de www.exemplo.com é direcionada para um resolvedor DNS, que geralmente é gerenciado pelo ISP (Internet service provider – Provedor de serviços de internet) do usuário, como um provedor de internet a cabo, um provedor de banda larga DSL ou uma rede corporativa.
-3 - O resolvedor DNS do ISP encaminha a solicitação, que sai de www.exemplo.com e passa para um serviço de nome raiz DNS.
-4 - O resolvedor DNS do ISP encaminha novamente a solicitação de www.exemplo.com, mas desta vez para um dos servidores de nome TLD de domínios .com. O servidor de nome dos domínios .com responde a solicitação com os nomes dos quatro servidores de nome do Amazon Route 53 que estão associados ao domínio exemplo.com.
-5 - O resolvedor DNS do ISP escolhe um servidor de nome do Amazon Route 53 e encaminha a solicitação de www.exemplo.com para o servidor de nome em questão.
-6 - O servidor de nome do Amazon Route 53 procura na zona hospedada exemplo.com pelo registro de www.exemplo.com, obtém o valor associado, como o endereço IP de um servidor web (192.0.2.44) e retorna o endereço IP ao resolvedor DNS.
-7 - Por fim, o resolvedor DNS do ISP obtém o endereço IP de que o usuário precisa. O resolvedor retorna este valor para o navegador. O resolvedor DNS também armazenará em cache o endereço IP de exemplo.com durante um período que você especificará para que ele possa responder mais rapidamente da próxima vez que alguém pesquisar por exemplo.com. Para obter mais informações, consulte a TTL (time to live – vida útil).
-8 - O navegador enviará uma solicitação de www.exemplo.com para o endereço IP que obteve do resolvedor DNS. O seu conteúdo poderá ser encontrado lá. Por exemplo, um servidor web em execução em uma instância do Amazon EC2 ou um bucket do Amazon S3 que seja configurado como um endpoint do site.
-9 - O servidor web ou outro recurso em 192.0.2.44 retornará a página web de www.exemplo.com para o navegador que, por sua vez, exibirá a página.
+1 - Um usuário abre um navegador, digita www.exemplo.com na barra de endereços e aperta Enter. <br>
+2 - A solicitação de www.exemplo.com é direcionada para um resolvedor DNS, que geralmente é gerenciado pelo ISP (Internet service provider – Provedor de serviços de internet) do usuário, como um provedor de internet a cabo, um provedor de banda larga DSL ou uma rede corporativa. <br>
+3 - O resolvedor DNS do ISP encaminha a solicitação, que sai de www.exemplo.com e passa para um serviço de nome raiz DNS. <br>
+4 - O resolvedor DNS do ISP encaminha novamente a solicitação de www.exemplo.com, mas desta vez para um dos servidores de nome TLD de domínios .com. O servidor de nome dos domínios .com responde a solicitação com os nomes dos quatro servidores de nome do Amazon Route 53 que estão associados ao domínio exemplo.com. <br>
+5 - O resolvedor DNS do ISP escolhe um servidor de nome do Amazon Route 53 e encaminha a solicitação de www.exemplo.com para o servidor de nome em questão. <br>
+6 - O servidor de nome do Amazon Route 53 procura na zona hospedada exemplo.com pelo registro de www.exemplo.com, obtém o valor associado, como o endereço IP de um servidor web (192.0.2.44) e retorna o endereço IP ao resolvedor DNS. <br>
+7 - Por fim, o resolvedor DNS do ISP obtém o endereço IP de que o usuário precisa. O resolvedor retorna este valor para o navegador. O resolvedor DNS também armazenará em cache o endereço IP de exemplo.com durante um período que você especificará para que ele possa responder mais rapidamente da próxima vez que alguém pesquisar por exemplo.com. Para obter mais informações, consulte a TTL (time to live – vida útil). <br>
+8 - O navegador enviará uma solicitação de www.exemplo.com para o endereço IP que obteve do resolvedor DNS. O seu conteúdo poderá ser encontrado lá. Por exemplo, um servidor web em execução em uma instância do Amazon EC2 ou um bucket do Amazon S3 que seja configurado como um endpoint do site. <br>
+9 - O servidor web ou outro recurso em 192.0.2.44 retornará a página web de www.exemplo.com para o navegador que, por sua vez, exibirá a página. <br>
 
 
 Link: https://aws.amazon.com/pt/route53/what-is-dns/#:~:text=O%20sistema%20DNS%20da%20internet,dom%C3%ADnio%20no%20navegador%20da%20web.
