@@ -1,0 +1,84 @@
+=====================================================================================
+- VOCÊ DEVE FAZER TODO O PROCEDIMENTO EM MAQUINAS VIRTUAIS;
+=====================================================================================
+Estrutura da Rede - Classe C - Rede Domestica
+
+- Estrutura dos Servidores
+Nome da maq.: ns1 (DNS pri)
+FQDN: ns1.tsc.example.com
+IP: 192.168.0.200
+
+Nome da maq.: ns2 (DNS sec)
+FQDN: ns2.tsc.example.com
+IP: 192.168.0.199
+
+- Estrutura de maquinas Clientes
+Nome da maq.: host1 (maquina para testar as conf)
+FQDN: host1.tsc.example.com
+IP: 192.168.0.198
+
+Nome da maq.: host2 (maquina para testar as conf)
+FQDN: host2.tsc.example.com
+IP: 192.168.0.197
+=====================================================================================
+Descrição:
+- 4 Maquinas Virtuais com o sistema operacional Debian Linux 11.4;
+- Sistemas operacionais sem interface grafica (Srv por padrão é sem interface grafica);
+- Todo o processo de teste e configuração, tanto nas maquinas server, quanto nas maquinas clientes foram feitos com auxilio de linha de comando;
+- O conteudo das pasta "Pasta_ETC-BIND_NS1" e "Pasta_ETC-BIND_NS2" devem ser extraidos dentro de cada servidor correspondente, dentro da pasta: /etc/bind;
+=====================================================================================
+NAS MAQUINAS SERVIDOR:
+
+Obs.: Criando a pasta onde vamos clonar os repositrios
+1 - mkdir /home/debian/user
+1.1 - cd /home/debian/user
+1.2 - git clone https://github.com.br/axr6/utilitarios
+
+2 - Aplicações utilizadas nos servidores DNS:
+apt install -y bind9 bind9utils bind9-doc ufw
+
+Obs.: Fazendo um backup dos arquivos padrões do BIND
+3 - cd /etc/bind
+3.1 - ls -la
+3.2 - mkdir /home/debian/backupbind
+3.3 - mv * /home/debian/backupbind
+
+Obs.: Copiando os arquivos alterados para a pasta padrão no sistema
+4 - cd /home/debian/user/utilitarios/Aula-Protocolos/Srv_DNS/Pasta_ETC-BIND_NS1
+4.1 - ls -la
+4.2 - cp -R * /etc/bind
+
+Obs.: Confirmando se os arquivos foram enviados corretamente
+5 - cd /etc/bind
+5.1 - ls -la
+
+Obs.: Agora as alterações podem ser feitas:
+- IP
+- Nome dos servidores
+- ETC
+
+
+(Verificando a sintaxe de configuração do BIND)
+named-checkconf 
+
+(verificar a configuração da zona de encaminhamento “tsc.example.com”)
+sudo named-checkzone tsc.example.com db.tsc.example.com
+
+(verificar a configuração da zona reversa “168.192.in-addr.arpa”)
+named-checkzone 168.192.in-addr.arpa /etc/bind/zones/db.192.168
+
+(Ativando e liberando acesso do BIND, ssh e Nginx no UFW)
+ufw enable
+ufw allow 22/tcp
+ufw allow Bind9
+=====================================================================================
+NAS MAQUINAS CLIENTE:
+
+Aplicações utilizadas nas maquinas clientes:
+apt install -y dnsutils nginx
+
+(Ativando e liberando acesso do BIND, ssh e Nginx no UFW)
+ufw enable
+ufw allow 22/tcp
+ufw allow 80/tcp
+=====================================================================================
