@@ -1,0 +1,20 @@
+Exemplo:
+Srv 1 - Firewall:
+ - Nome da maquina: srvfirewall
+ - Mac: 00:1B:C9:4B:E3:57
+ - IP: 192.168.0.0/24 ou 10.0.0.0/16 etc....
+
+Srv 2 - IDS/IPS
+ - Nome da maquina: srvidsips
+ - Mac: 00:1B:C9:4B:E3:57
+ - IP: 192.168.0.0/24 ou 10.0.0.0/16 etc....
+
+Srv 3 - Fail2Ban (Nginx)
+ - Nome da maquina: srvweb
+ - Mac: 00:1B:C9:4B:E3:57
+ - IP: 192.168.0.0/24 ou 10.0.0.0/16 etc....
+
+Srv 4 - DNS
+ - Nome da maquina: srvdns
+ - Mac: 00:1B:C9:4B:E3:57
+ - IP: 192.168.0.0/24 ou 10.0.0.0/16 etc....
