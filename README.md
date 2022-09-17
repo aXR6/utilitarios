@@ -1,6 +1,10 @@
 # utilitarios
-Material utilizado durante as aulas.
-
+Material utilizado durante as aulas de:
+ - Desenv. Web em Html5, Css, Javascript e Php
+ - Protocolos de Comunicação Tcp/ip
+ - Segurança Cibernética
+ - Protocolos de Redes de Computadores
+ - Programação Orientada a Objetos em Java
 ```
 Acesse:
 Thalles Canela - TSC
