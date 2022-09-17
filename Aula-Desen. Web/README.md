@@ -19,7 +19,7 @@
 ```
 
 # Obs.: Não precisa fazer o clone, pois aqui é um manual...
-
+# Obs.: O servidor de produção é apenas para testes, não é mais obrigatorio.
 
 
 
