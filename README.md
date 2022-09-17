@@ -1,5 +1,5 @@
 # utilitarios
-Material para aula
+Material utilizado durante as aulas.
 
 ```
 Acesse:
