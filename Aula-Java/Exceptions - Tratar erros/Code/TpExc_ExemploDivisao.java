@@ -1,7 +1,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class ExemploDivisao {
+public class TpExc_ExemploDivisao {
 
   public static int calculaQuociente(int numerador, int denominador) throws ArithmeticException{
     return numerador / denominador;

@@ -1,4 +1,4 @@
-public class Exemplo_Throw {
+public class TpExc_Exemplo_Throw {
 
     public static void saque(double valor) {
       if(valor > 400) {

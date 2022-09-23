@@ -1,4 +1,4 @@
-public class Exemplo_GetMessage {
+public class TpExc_Exemplo_GetMessage {
 
     public static void main(String[] args) {
       try {
