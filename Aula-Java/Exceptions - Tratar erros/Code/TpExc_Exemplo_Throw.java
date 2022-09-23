@@ -12,4 +12,4 @@ public class Exemplo_Throw {
     public static void main(String[] args) {
       saque(1500);
     }
-  }
+  } 
