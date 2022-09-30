@@ -4,23 +4,23 @@
 
 # Da criação das máquinas
 # Part 1.
-- Criar as máquinas virtuas (SRV);
-- Criar a sub-rede na rede privada;
-- Aplicar testes de conexão;
+- Criar as máquinas virtuas (SRV); (Primeira entrega)
+- Criar a sub-rede na rede privada; (Segunda entrega)
+- Aplicar testes de conexão; (Terça entrega)
 Obs.: Durante o processo, documentar todo o procedimento com prints e comentarios.
 
 # Da documentação e dos testes.
 # Part 1.
 Levantamento:
-- Identificar o ambiente que será analisado (Ambiente simulado);
-- Identificar e mostrar de forma clara o tráfego no WireShark, destacando o que for necessário;
-- Coletar e gravar o tráfego analisado;
+- Identificar o ambiente que será analisado (Ambiente simulado); (Quarta entrega)
+- Identificar e mostrar de forma clara o tráfego no WireShark, destacando o que for necessário; (Quinta entrega)
+- Coletar e gravar o tráfego analisado; (Sexta entrega)
 Obs.: Durante o processo, documentar todo o procedimento com prints e comentarios.
 
 # Part 2.
 Vulnerabilidades:
-- Identificar quais são e de que tipo são;
-- Mostrar quais ferramentas exploram a vulnerabilidade;
+- Identificar quais são e de que tipo são; (Setima entrega)
+- Mostrar quais ferramentas exploram a vulnerabilidade; (Oitava entrega)
 Obs.: Durante o processo, documentar todo o procedimento com prints e comentarios.
 
 # Part 3.
