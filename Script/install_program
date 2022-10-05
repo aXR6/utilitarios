@@ -1,0 +1,14 @@
+#Modelo de Script para automação de tarefas
+apt update
+apt dist-upgrade -y
+apt autoremove -y
+apt autoclean
+
+#Instalação de programas
+apt install git -y
+
+#Descobrindo drivers
+lspci
+
+#Instalação de drivers
+apt install firmware-realtek firmware-intel-microcode -y
