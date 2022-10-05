@@ -1,4 +1,4 @@
-#Modelo de Script para automação de tarefas
+#Automatizador de update, instalação de update, remoção de programas desnecessarios, limpeza de arquivos de update
 apt update
 apt dist-upgrade -y
 apt autoremove -y
