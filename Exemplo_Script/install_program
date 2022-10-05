@@ -7,7 +7,7 @@ apt autoclean
 #Instalação de programas
 apt install git -y
 
-#Descobrindo drivers
+#Descobrindo drivers (listando)
 lspci
 
 #Instalação de drivers
