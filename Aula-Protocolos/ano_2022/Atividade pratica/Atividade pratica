@@ -1,0 +1,39 @@
+Organização de entrega:
+- Documento no Word contendo texto e print;
+- A organização do documento deverá ser feita de forma clara para o professor;
+- Enviar apenas 1x;
+- Enviar o documento ou o arquivo para: thallescanelasi@gmail.com
+- 
+Obs.: A organização do documento fica a critério do aluno.
+Obs.: O documento precisa ser claro e conter texto e imagens.
+Obs.: O arquivo precisa ser identificado.
+
+Execução da prova:
+- Ter o WireShark instalado na máquina;
+
+Material para pesquisa: 
+- MEU REPO NO GITHUB: utilitarios/Aula-Cibersegurança/ano_2022/Documentos interessantes/Wireshark/
+
+---------- NOVA CHANCE AV1 ----------
+
+No WireShark (Objetivo da ferramenta):
+- Em qual categoria o WireShark se encontra? (Texto)
+- Qual é o objetivo da ferramenta? (Texto)
+- O que ela mostra na tela? (Texto)
+
+No WireShark (Protocolos):
+- Identificar os tipos de protocolos correntes no WireShark (Mínimo 5); (Texto/Print)
+- Identificar em qual camada do modelo OSI cada protocolo se encontra; (Texto/Print)
+- Identificar qual é a função do protocolo; (Texto)
+
+No WireShark (Sub-rede):
+- Identificar se existe sub-redes; (Texto/Print)
+- Listar os IPs das sub-redes (se existir); (Texto/Print)
+- Identificar IPv4 e IPv6; (Texto/Print)
+
+No WireShark (Filtros):
+- Filtrar o trafego por TCP na porta 443; (Salvar o arquivo com o resultado do filtro)
+- Filtrar o trafego por UDP na porta 443; (Salvar o arquivo com o resultado do filtro)
+- Ataques: Brute Force; (Salvar o arquivo com o resultado do filtro)
+- Ataques: PortScan; (Salvar o arquivo com o resultado do filtro)
+- Ataques: Malwares (Loki-bot); (Salvar o arquivo com o resultado do filtro)
