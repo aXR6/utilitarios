@@ -17,3 +17,15 @@ Organização de entrega:
 Obs.: A organização do documento fica a critério do aluno.
 Obs.: O documento precisa ser claro e conter texto e imagens.
 Obs.: O arquivo precisa ser identificado.
+
+---------- NOVA CHANCE AV1 ----------
+
+1º - Criar a classe funcionario;
+1.1 - Atributos: Nome, idade, data de nascimento, rg, cpf, titulo de eleitor, nome do pai, nome da mãe, rua, estado, pais, estado civil, nivel de ensino, ultima profissão;
+1.2 - Criar os metodos pertinentes a classe;
+1.3 - Gerar get e set;
+2º - Instanciar a classe e criar o objeto a partir da classe funcionario;
+3º - Defina o conceito de herança.
+4º - Defina o conceito de polimorfismo.
+5º - Defina o conceito de encapsulamento.
+6º - Defina Programação orientada a objetos.
