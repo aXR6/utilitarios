@@ -14,7 +14,7 @@ Execução da prova:
 Material para pesquisa: 
 - MEU REPO NO GITHUB: utilitarios/Aula-Cibersegurança/ano_2022/Documentos interessantes/Wireshark/
 
----------- ATIVIDADE ----------
+1º - ATIVIDADE
 
 No WireShark (Objetivo da ferramenta):
 - Em qual categoria o WireShark se encontra? (Texto)
@@ -37,3 +37,11 @@ No WireShark (Filtros):
 - Ataques: Brute Force; (Salvar o arquivo com o resultado do filtro)
 - Ataques: PortScan; (Salvar o arquivo com o resultado do filtro)
 - Ataques: Malwares (Loki-bot); (Salvar o arquivo com o resultado do filtro)
+
+2º - ATIVIDADE
+
+- O que é o PROTOCOLO IPV4?
+- O que é o PROTOCOLO IPV6?
+- O que é, e o que contem na estrutura de um pacote?
+- Principais diferenças entre o IPv4 e o IPv6;
+- Qual seria a solução para o esgotamento dos endereços IPv4?
