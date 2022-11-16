@@ -26,7 +26,7 @@ Obs.: Serviço de PenTest
 Iniciando os testes:
 - Preparando: script d1-mapear-host
 - Com sistema de proteação IDS/IPS: nmap -D RND:20 --open -sS --top-ports=100 site.com.br -oN portas-abertas
-- Sem sistema de proteação: nmap -D --open -sS -p- --min-rtae=60000 site.com.brportas-abertas
+- Sem sistema de proteação: nmap -D --open -sS -p- --min-rate=60000 site.com.brportas-abertas
 - Sabendo as portas abertas: nmap --open -sV -p80,8080 site.com.br porta-versao
 
 # Interfaces administrativas:
