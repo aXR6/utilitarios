@@ -44,7 +44,5 @@
 | :---: |
 
 <h4 align="center"> 
-```
 WPS 2023 - Incubadora de Softwares da Wyden Facimp
-```
 </h4>
