@@ -1,10 +1,10 @@
 # utilitarios
 Material utilizado durante as aulas de:
- - Desenv. Web em Html5, Css, Javascript e Php
- - Protocolos de Comunicação Tcp/ip
- - Segurança Cibernética
- - Protocolos de Redes de Computadores
- - Programação Orientada a Objetos em Java
+ - ARA0063 FUNDAMENTOS DE REDES DE COMPUTADORES;
+ - ARA0064 INTRODUÇÃO À SEGURANÇA DA INFORMAÇÃO;
+ - ARA0066 PARADIGMAS DE LINGUAGENS DE PROGRAMAÇÃO EM PYTHON;
+ - ARA0078 COMPUTAÇÃO EM NUVEM E WEB SERVICES EM LINUX;
+ - ARA0276 GESTÃO E CONFIGURAÇÃO DE SERVIÇOS DE REDES LINUX;
 ```
 Acesse:
 Thalles Canela - TSC
