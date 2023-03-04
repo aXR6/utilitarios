@@ -1,5 +1,5 @@
 # utilitarios
-Material de todos as aulas dos anos de:
+Material de todas as aulas dos anos de:
  - 2022;
  - 2023;
 ```
