@@ -1,17 +1,17 @@
 # 📁 Projeto WPS - Facimp
  - A WPS é uma incubadora de softwares que tem como objetivo treinar os alunos com casos reais vistos nos mais diversos ambientes de trabalho.
 
-# :hammer: Observação: 
+# 🛠️ Observação: 
  - Cada membro da equipe de desenvolvimento acompanhará uma equipe de alunos, tendo como supervisor os professores João Lucas e Thalles Canela.
 
-# :hammer: Será visto:
+# 🛠️ Será visto:
  - Levantamento de requisitos;
  - Criação do repositorio (Atlassian);
  - Modelagem do banco de dados;
  - Divisão das tarefas com base no tempo;
  - Infraestrutura;
 
-# :hammer: Processo seletivo:
+# 📁 Processo seletivo:
 > :construction: Fase 1; :construction:
  - Criação do Edital;
 > :construction: Fase 2; :construction:
@@ -21,7 +21,7 @@
 > :construction: Fase 4; :construction:
  - Selecionado uma ideia para que seja desdenvolvida pela equipe de alunos e acompanhada pelos professores João Lucas, Thalles Canela e a equipe de desenvolvimento;
 
-# :hammer: Equipes de alunos:
+# 📁 Equipes de alunos:
 > :construction: Engenharia de Software; :construction:
  - Acompanhado pelos professores: João Lucas e Thalles Canela
  - Acompanhado pelos devs Back-end: Nonilton
