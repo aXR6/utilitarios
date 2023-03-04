@@ -1,4 +1,4 @@
-# :hammer: Projeto WPS - Facimp
+# 📁 Projeto WPS - Facimp
  - A WPS é uma incubadora de softwares que tem como objetivo treinar os alunos com casos reais vistos nos mais diversos ambientes de trabalho.
 
 # :hammer: Observação: 
