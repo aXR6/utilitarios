@@ -40,7 +40,7 @@
  - Acompanhado pelos professores: João Lucas e Thalles Canela
  - Acompanhado pelos devs: Jhonathan
 
-| [<img src="https://raw.githubusercontent.com/aXR6/utilitarios/main/WPS/2023/Registro%20da%20reuni%C3%A3o%20de%20inaugura%C3%A7%C3%A3o.jpeg"><br><sub>Registro visual do 1º encontro da WPS - 2023</sub>](https://github.com/camilafernanda) |
+| [<img src="https://raw.githubusercontent.com/aXR6/utilitarios/main/WPS/2023/Registro%20da%20reuni%C3%A3o%20de%20inaugura%C3%A7%C3%A3o.jpeg"><br><sub>Registro visual do 1º encontro da WPS - 2023</sub>](https://www.wyden.com.br/unidades/facimp) |
 | :---: |
 
 ```
