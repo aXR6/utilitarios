@@ -42,6 +42,10 @@
 
 ![Primeiro encontro da WPS - Facimp 2023](https://raw.githubusercontent.com/aXR6/utilitarios/main/WPS/2023/Registro%20da%20reuni%C3%A3o%20de%20inaugura%C3%A7%C3%A3o.jpeg)
 
+
+> :construction: Projeto em construção :construction:
+
+
 ```
 Acesse:
 Thalles Canela - TSC
