@@ -1,10 +1,7 @@
 # utilitarios
-Material utilizado durante as aulas de:
- - ARA0063 FUNDAMENTOS DE REDES DE COMPUTADORES;
- - ARA0064 INTRODUÇÃO À SEGURANÇA DA INFORMAÇÃO;
- - ARA0066 PARADIGMAS DE LINGUAGENS DE PROGRAMAÇÃO EM PYTHON;
- - ARA0078 COMPUTAÇÃO EM NUVEM E WEB SERVICES EM LINUX;
- - ARA0276 GESTÃO E CONFIGURAÇÃO DE SERVIÇOS DE REDES LINUX;
+Material de todos as aulas dos anos de:
+ - 2022;
+ - 2023;
 ```
 Acesse:
 Thalles Canela - TSC
