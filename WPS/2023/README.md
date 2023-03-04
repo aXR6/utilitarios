@@ -40,6 +40,9 @@
  - Acompanhado pelos professores: João Lucas e Thalles Canela
  - Acompanhado pelos devs: Jhonathan
 
+
+![descrição da imagem](https://raw.githubusercontent.com/aXR6/utilitarios/main/WPS/2023/Registro%20da%20reuni%C3%A3o%20de%20inaugura%C3%A7%C3%A3o.jpeg)
+
 ```
 Acesse:
 Thalles Canela - TSC
