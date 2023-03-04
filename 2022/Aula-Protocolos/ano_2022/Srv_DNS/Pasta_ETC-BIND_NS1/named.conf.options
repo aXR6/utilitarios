@@ -1,15 +1,17 @@
 acl "trusted" {
-        192.168.0.200;    # ns1 - can be set to localhost
-        192.168.0.199;    # ns2
-        192.168.0.198;  # host1
-        192.168.0.197;  # host2
+	192.168.2.51; # ks8-vm1 - 3e:3b:a3:94:83:86
+	192.168.2.52; # ks8-vm2 - 46:6a:3d:cf:80:4b
+	192.168.2.53; # ks8-vm3 - ca:72:04:de:c8:d9
+	192.168.2.54; # ks8-vm4 - d6:38:66:ea:8a:a6
+	192.168.2.55; # dns-master - e6:cd:56:c6:8a:2d
+	192.168.2.56; # dns-slave  - de:0b:8b:b1:2e:97
 };
 options {
 	directory "/var/cache/bind";
 
         recursion yes;                 # enables resursive queries
         allow-recursion { trusted; };  # allows recursive queries from "trusted" clients
-        listen-on { 192.168.0.200; };   # ns1 private IP address - listen on private network only
+        listen-on { 192.168.2.55; };   # ns1 private IP address - listen on private network only
         allow-transfer { none; };      # disable zone transfers by default
 
         forwarders {
@@ -17,24 +19,6 @@ options {
                 8.8.4.4;
         };
 
-	// If there is a firewall between you and nameservers you want
-	// to talk to, you may need to fix the firewall to allow multiple
-	// ports to talk.  See http://www.kb.cert.org/vuls/id/800113
-
-	// If your ISP provided one or more IP addresses for stable 
-	// nameservers, you probably want to use them as forwarders.  
-	// Uncomment the following block, and insert the addresses replacing 
-	// the all-0's placeholder.
-
-	// forwarders {
-	// 	0.0.0.0;
-	// };
-
-	//========================================================================
-	// If BIND logs error messages about the root key being expired,
-	// you will need to update your keys.  See https://www.isc.org/bind-keys
-	//========================================================================
 	dnssec-validation auto;
-
 	listen-on-v6 { any; };
 };

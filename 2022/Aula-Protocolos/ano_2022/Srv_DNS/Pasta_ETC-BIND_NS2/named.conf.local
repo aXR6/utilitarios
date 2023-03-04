@@ -6,14 +6,14 @@
 // organization
 //include "/etc/bind/zones.rfc1918";
 
-zone "tsc.example.com" {
+zone "pve.datacenter.tsc" {
     type slave;
-    file "db.tsc.example.com";
-    masters { 192.168.0.200; };  # ns1 private IP
+    file "db.pve.datacenter.tsc";
+    masters { 192.168.2.55; };  # ns1 private IP
 };
 
 zone "168.192.in-addr.arpa" {
     type slave;
     file "db.192.168";
-    masters { 192.168.0.200; };  # ns1 private IP
+    masters { 192.168.2.56; };  # ns1 private IP
 };
