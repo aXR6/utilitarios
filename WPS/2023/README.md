@@ -12,7 +12,7 @@
  - Infraestrutura;
 
 # Processo seletivo:
-# Fase 1;
+![Fase 1;](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
  - Criação do Edital;
 # Fase 2;
  - Divulgação do edital nos cursos de T.I.;
