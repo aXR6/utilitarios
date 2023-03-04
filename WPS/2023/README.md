@@ -21,7 +21,7 @@
 > :construction: Fase 4; :construction:
  - Selecionado uma ideia para que seja desdenvolvida pela equipe de alunos e acompanhada pelos professores João Lucas, Thalles Canela e a equipe de desenvolvimento;
 
-# Equipes de alunos:
+# :hammer: Equipes de alunos:
 > :construction: Engenharia de Software; :construction:
  - Acompanhado pelos professores: João Lucas e Thalles Canela
  - Acompanhado pelos devs Back-end: Nonilton
