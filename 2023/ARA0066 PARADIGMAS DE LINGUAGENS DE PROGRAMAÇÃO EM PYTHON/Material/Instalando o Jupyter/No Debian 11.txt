@@ -1,0 +1,2 @@
+Install Jupyter Notebook on Debian 11 Bullseye Linux
+https://linux.how2shout.com/install-jupyter-notebook-on-debian-11-bullseye-linux/
