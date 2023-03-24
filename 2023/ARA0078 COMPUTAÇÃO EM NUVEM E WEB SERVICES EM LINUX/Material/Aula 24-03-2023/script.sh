@@ -1,36 +1,16 @@
-# Desinstalar versões antigas 
-# Versões mais antigas do Docker eram chamadas de docker, docker.ioou docker-engine. Desinstale essas versões mais antigas antes de tentar instalar uma nova versão:
-apt remove docker docker-engine docker.io containerd runc
+sudo apt -y install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 
-# Instale usando o repositório 
-# Antes de instalar o Docker Engine pela primeira vez em uma nova máquina host, você precisa configurar o repositório do Docker. Posteriormente, você pode instalar e atualizar o Docker a partir do repositório.
+curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
-# Configurar o repositório
-# Atualize o aptíndice do pacote e instale os pacotes para permitir apto uso de um repositório por HTTPS:
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list
+
 apt-get update
-apt-get install ca-certificates curl gnupg
 
-# Adicione a chave GPG oficial do Docker:
-mkdir -m 0755 -p /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+apt-get install docker-ce docker-ce-cli containerd.io
 
-# Use o seguinte comando para configurar o repositório:
-echo \
-  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
-  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \ tee /etc/apt/sources.list.d/docker.list > /dev/null
+docker -version
 
-# Instalar Docker Engine
-# Este procedimento funciona para Debian em x86_64/ amd64, armhf, arm64e Raspbian.
-# Atualize o aptíndice do pacote:
-apt update
-
-# Recebendo um erro GPG durante a execução apt-get update?
-chmod a+r /etc/apt/keyrings/docker.gpg
-apt update
-
-# Instale o Docker Engine, o containerd e o Docker Compose.
-# Para instalar a versão mais recente, execute:
-apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+systemctl status docker
 
 # Instalação do Portainer Server
 # Criando um volume
