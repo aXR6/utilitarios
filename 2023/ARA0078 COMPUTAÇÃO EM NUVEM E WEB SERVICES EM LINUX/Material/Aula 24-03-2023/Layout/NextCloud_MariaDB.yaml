@@ -1,0 +1,92 @@
+version: '2'
+
+volumes:
+  pnextcconfig:
+  pnextcdata:
+  eadnextcconfig:
+  eadnextcdata:
+  db:
+  nginxdata:
+  nginxletsencrypt:
+  
+services:
+  db:
+    image: mariadb
+    restart: unless-stopped
+    container_name: mariadb
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      - TZ=Brazil
+      - MYSQL_ROOT_PASSWORD=SENHA_SENHA
+      - MYSQL_PASSWORD=SENHA_SENHA
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=thalles
+      #- MYSQL_ROOT_PASSWORD=SENHA_SENHA
+      #- MYSQL_DATABASE=nginx
+      #- MYSQL_USER=thalles
+      #- MYSQL_PASSWORD=SENHA_SENHA
+
+  nextcloud:
+    image: lscr.io/linuxserver/nextcloud:latest
+    container_name: nextcloud
+    environment:
+      - MYSQL_PASSWORD=SENHA_SENHA
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=thalles
+      - MYSQL_HOST=db
+      - TZ=America/Fortaleza
+    volumes:
+      - pnextcconfig:/config
+      - pnextcdata:/data
+    ports:
+      - 443:443
+    depends_on:
+      - db
+    links:
+      - db
+    restart: unless-stopped
+      
+  nextcloud_ead:
+    image: lscr.io/linuxserver/nextcloud:latest
+    container_name: nextcloud_ead
+    environment:
+      - MYSQL_PASSWORD=SENHA_SENHA
+      - MYSQL_DATABASE=nextcloud_ead
+      - MYSQL_USER=thalles
+      - MYSQL_HOST=db
+      - TZ=America/Fortaleza
+
+    volumes:
+      - eadnextcconfig:/config
+      - eadnextcdata:/data
+    ports:
+      - 8080:443
+    depends_on:
+      - db
+    links:
+      - db
+    restart: unless-stopped
+
+  app2:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    container_name: nginxproxy
+    ports:
+      - '80:80' # Public HTTP Port
+      - '81:81' # Admin Web Port
+    environment:
+      - TZ=Brazil
+      - DB_MYSQL_HOST=db
+      - DB_MYSQL_PORT=3306
+      - DB_MYSQL_USER=thalles
+      - DB_MYSQL_PASSWORD=902grego1989
+      - DB_MYSQL_NAME=nginx
+    volumes:
+      - nginxdata:/data
+      - nginxletsencrypt:/etc/letsencrypt
+    depends_on:
+      - db
+    links:
+      - db
