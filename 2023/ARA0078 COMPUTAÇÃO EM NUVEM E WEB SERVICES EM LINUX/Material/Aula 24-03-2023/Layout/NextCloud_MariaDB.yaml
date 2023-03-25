@@ -81,7 +81,7 @@ services:
       - DB_MYSQL_HOST=db
       - DB_MYSQL_PORT=3306
       - DB_MYSQL_USER=thalles
-      - DB_MYSQL_PASSWORD=902grego1989
+      - DB_MYSQL_PASSWORD=SENHA_SENHA
       - DB_MYSQL_NAME=nginx
     volumes:
       - nginxdata:/data
