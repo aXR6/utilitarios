@@ -1,0 +1,26 @@
+Pesquisa.
+
+Conteúdo a ser pesquisado:
+1. TIPOS DE DADOS
+1.1 PRIMITIVOS
+1.2 AGLOMERADOS
+1.3 PONTEIROS E REFERÊNCIAS
+1.4 VERIFICAÇÃO DE TIPOS
+1.5 TEORIA E TIPOS DE DADOS
+1.6 DADOS ABSTRATOS E ENCAPSULAMENTO
+
+Formato:
+- PDF;
+
+Padrão:
+- Não será exigido, mas quem fizer no padrão de artigo cientifico o trabalho vale 1 ponto.
+
+O que precisa ter:
+- Nome completo;
+- Matrícula;
+
+Objetivo que o trabalho deve alcançar:
+- Breve descrição da internet;
+- Exemplos em código;
+- Entendimento do aluno;
+Obs.: Documento objetivo e claro.
