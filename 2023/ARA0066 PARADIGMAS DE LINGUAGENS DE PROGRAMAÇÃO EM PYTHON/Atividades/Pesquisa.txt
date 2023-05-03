@@ -23,6 +23,4 @@ Objetivo que o trabalho deve alcançar:
 - Breve descrição da internet;
 - Exemplos em código;
 - Entendimento do aluno;
-_____________________________________
 Obs.: Documento objetivo e claro.
-_____________________________________
