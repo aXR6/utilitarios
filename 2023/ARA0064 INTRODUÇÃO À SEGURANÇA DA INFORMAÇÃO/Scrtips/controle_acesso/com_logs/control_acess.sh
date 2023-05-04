@@ -52,10 +52,10 @@ for (( i=1; i<=$max_attempts; i++ )); do
 done
 
 # Captura o endereço IP do usuário
-ip_address="$(echo $SSH_CONNECTION | awk '{print $1}')"
+ip_address=$(hostname -I)
 
 # Salva o log de acesso em um arquivo
-log_file="logs.txt"
+log_file="logs.log"
 date="$(date "+%Y-%m-%d %H:%M:%S")"
 echo "${date} - Usuário ${username} com endereço IP ${ip_address} acessou o sistema." >> "$log_file"
 
