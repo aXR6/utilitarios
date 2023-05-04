@@ -7,11 +7,12 @@ echo
 # Pergunta ao usuário pelos dados pessoais
 read -p "Digite seu nome: " nome
 read -p "Digite seu sobrenome: " sobrenome
+read -p "Digite seu CPF: " cpf
 read -p "Digite sua data de nascimento (DDMMAAAA): " data_nascimento
 read -p "Digite o nome da sua cidade natal: " cidade_natal
 
 # Concatena os dados pessoais para gerar uma senha
-senha="${nome}${sobrenome}${data_nascimento}${cidade_natal}"
+senha="${nome}${sobrenome}${cpf}${data_nascimento}${cidade_natal}"
 
 # Gera uma senha aleatória com base nos dados pessoais fornecidos
 senha_segura=$(echo "$senha" | sha256sum | base64 | head -c 16)
