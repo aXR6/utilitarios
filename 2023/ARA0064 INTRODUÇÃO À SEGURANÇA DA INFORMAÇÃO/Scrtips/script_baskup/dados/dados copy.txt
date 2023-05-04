@@ -1,0 +1,12 @@
+Este script criptografa o arquivo dados.txt usando AES-256-CBC com SHA-512, PBKDF2 e 1000000 iterações, e salva o arquivo 
+criptografado em dados_criptografados.enc. Em seguida, descriptografa o arquivo criptografado e salva o resultado em 
+dados_descriptografados.txt.
+
+Note que a opção -salt adiciona aleatoriedade ao processo de criptografia e torna o ataque de dicionário mais difícil. 
+A opção -pbkdf2 utiliza a função de derivador de chave baseada em senha PBKDF2 para tornar a senha mais forte e difícil 
+de ser quebrada por ataques de força bruta. A opção -iter especifica o número de iterações do algoritmo de derivação de 
+chave. Quanto mais iterações, mais forte será a chave gerada.
+
+É importante manter a senha de criptografia em segurança e não compartilhá-la com outras pessoas, pois quem tiver acesso à 
+senha poderá descriptografar os dados. Além disso, é sempre recomendável fazer backup dos dados antes de criptografá-los 
+para evitar perda de informações.
