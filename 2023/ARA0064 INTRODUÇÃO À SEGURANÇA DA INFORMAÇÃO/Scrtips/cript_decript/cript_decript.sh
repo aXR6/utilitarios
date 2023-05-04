@@ -28,15 +28,15 @@ criptografar_descriptografar() {
 if [ -f "$dados1" ]; then
     # Remove o arquivo caso exista
     rm "$dados1" "$dados2"
-    echo "---------------------------------------"
+    echo "--------------------------------------------------"
     echo "Arquivo "$dados1" e "$dados2" apagado com sucesso!"
-    echo "---------------------------------------"
+    echo "--------------------------------------------------"
 
     criptografar_descriptografar "dados.txt" "dados_criptografados.enc" "dados_descriptografados.txt" "Nzk0MzE3ZDJhNDBj"
 else
-    echo "--------------------------------"
+    echo "---------------------------------------------"
     echo "Os arquivos "$dados1", "$dados2" não existe!"
-    echo "--------------------------------"
+    echo "---------------------------------------------"
 
     criptografar_descriptografar "dados.txt" "dados_criptografados.enc" "dados_descriptografados.txt" "Nzk0MzE3ZDJhNDBj"
 fi
