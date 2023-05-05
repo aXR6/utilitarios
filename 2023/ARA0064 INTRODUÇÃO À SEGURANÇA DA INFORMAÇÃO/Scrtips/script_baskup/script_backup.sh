@@ -14,6 +14,7 @@ fi
 read -s -p "Digite a senha para proteger o backup: " senha
 echo ""
 
+
 # Define o nome do arquivo de backup
 backup_file="$pasta-$(date +%Y%m%d%H%M%S).tar.gz.enc"
 

@@ -4,20 +4,7 @@
 read -p "Informe o tamanho da senha desejado: " tamanho
 read -p "Deseja incluir letras maiúsculas? (s/n): " maiusculas
 read -p "Deseja incluir letras minúsculas? (s/n): " minusculas
-read -p "Deseja incluir números? (s/n): " numeros
-read -p "Deseja incluir símbolos? (s/n): " simbolos
-
-# Verifica se o tamanho informado é válido
-if [[ ! "$tamanho" =~ ^[0-9]+$ ]]; then
-  echo "Tamanho inválido. Informe um valor numérico."
-  exit 1
-fi
-
-# Define as opções de caracteres possíveis para a senha
-opcoes=""
-if [[ "$maiusculas" =~ ^[sS]$ ]]; then
-  opcoes+="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-fi
+read -p "Deseja incluir número4. BOAS PRÁTICAS EM SEGURANÇA DA INFORMAÇÃO
 if [[ "$minusculas" =~ ^[sS]$ ]]; then
   opcoes+="abcdefghijklmnopqrstuvwxyz"
 fi

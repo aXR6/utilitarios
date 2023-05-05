@@ -13,7 +13,7 @@ criptografar_descriptografar() {
     # Define a senha de criptografia
     password="$4"
 
-    # Criptografa o arquivo de entrada usando AES-256-CBC com SHA-512, PBKDF2 e 1000000 iterações
+    # Criptografa o arquivo de entrada usando AES-256-CBC com SHA-512, PBKDF2 e 1.000.000,00 iterações
     openssl enc -aes-256-cbc -md sha512 -pbkdf2 -iter 1000000 -salt -in "$input_file" -out "$output_file" -pass pass:"$password"
 
     echo "Arquivo criptografado com sucesso!"
