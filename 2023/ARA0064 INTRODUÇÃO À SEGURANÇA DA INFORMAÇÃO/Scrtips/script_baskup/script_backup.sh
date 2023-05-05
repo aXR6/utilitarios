@@ -1,8 +1,5 @@
 #!/bin/bash
 
-
-
-
 # Lê o nome da pasta que será feito o backup
 read -p "Digite o nome da pasta que será feito o backup: " pasta
 
@@ -16,7 +13,6 @@ fi
 # Lê a senha do usuário
 read -s -p "Digite a senha para proteger o backup: " senha
 echo ""
-
 
 # Define o nome do arquivo de backup
 backup_file="$pasta-$(date +%Y%m%d%H%M%S).tar.gz.enc"
