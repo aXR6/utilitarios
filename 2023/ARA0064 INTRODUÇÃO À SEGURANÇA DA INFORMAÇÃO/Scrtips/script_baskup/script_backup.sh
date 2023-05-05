@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+
+
 # Lê o nome da pasta que será feito o backup
 read -p "Digite o nome da pasta que será feito o backup: " pasta
 
