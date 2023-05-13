@@ -18,8 +18,8 @@
 
 # Back-End
 - Data: 13/06/2023
-- Entrega: Cadastro de cliente, rotas, documentos, perfil tributario, entradas, saidas servicos / saida produtos, cadastro de usuario.
+- Entregue: Cadastro de cliente, rotas, documentos, perfil tributario, entradas, saidas servicos / saida produtos, cadastro de usuario.
 
 # QA/DevOps
 - Data: 13/06/2023
-- Entrega: conta no doker hub, como gerar uma imagem de um projeto, conta na oraclo cloud.
+- Entregue: conta no doker hub (OK), como gerar uma imagem de um projeto (OK), conta na oraclo cloud (OK).
