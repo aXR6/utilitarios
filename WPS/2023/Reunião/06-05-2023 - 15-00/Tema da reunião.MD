@@ -1,6 +1,5 @@
 # Agenda de reunião
 
-
 # Engenharia de Softwares
 - Entrega: Documentação pronta, requisitos criados e compartilhados.
 
