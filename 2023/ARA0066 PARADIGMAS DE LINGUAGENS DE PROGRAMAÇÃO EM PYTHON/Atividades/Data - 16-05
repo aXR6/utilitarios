@@ -1,0 +1,23 @@
+def calculadora(operador, operando1, operando2):
+    if operador == '+':
+        resultado = operando1 + operando2
+    elif operador == '-':
+        resultado = operando1 - operando2
+    elif operador == '*':
+        resultado = operando1 * operando2
+    elif operador == '/':
+        resultado = operando1 / operando2
+    elif operador == '%':
+        resultado = operando1 + operando2
+    else:
+        print("Operador inválido!")
+        return None
+
+    return resultado
+
+# Testando a calculadora
+print(calculadora('+', 5, 3))  # Soma: 5 + 3 = 8
+print(calculadora('-', 7, 2))  # Subtração: 7 - 2 = 5
+print(calculadora('*', 4, 6))  # Multiplicação: 4 * 6 = 24
+print(calculadora('/', 10, 2)) # Divisão: 10 / 2 = 5
+print(calculadora('%', 50045654000, 50000456456000000))  # Operador inválido!
