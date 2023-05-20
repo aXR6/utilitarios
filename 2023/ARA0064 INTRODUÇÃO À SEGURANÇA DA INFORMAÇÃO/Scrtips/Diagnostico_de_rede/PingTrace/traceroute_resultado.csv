@@ -1,0 +1,2 @@
+traceroute to 192.168.0.228 (192.168.0.228), 30 hops max, 60 byte packets
+ 1  dellg15 (192.168.0.228)  0.032 ms  0.012 ms  0.009 ms
