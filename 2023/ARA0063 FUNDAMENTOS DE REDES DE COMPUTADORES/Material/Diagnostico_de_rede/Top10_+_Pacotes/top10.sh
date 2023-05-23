@@ -10,7 +10,7 @@ diagnosticar_rede() {
   echo "Iniciando captura de pacotes na interface $interface..."
   echo "Pressione Ctrl+C para parar a captura."
   echo
-
+ips_enviado_pacotes
   # Executa o tcpdump para capturar pacotes na interface de rede
   sudo tcpdump -i "$interface" -n -c 10000 > captura_pacotes.txt &
 
