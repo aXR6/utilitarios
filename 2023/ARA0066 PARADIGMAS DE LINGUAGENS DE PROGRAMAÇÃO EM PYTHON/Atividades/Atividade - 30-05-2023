@@ -47,39 +47,17 @@ class Pessoa:
         for hobby in self.hobbies:
             print(hobby)
 
-
 # Instanciação do objeto
-pessoa = Pessoa("João", 30, "Rua A, 123")
 
 # Chamada dos métodos getter
-print("Nome:", pessoa.get_nome())
-print("Idade:", pessoa.get_idade())
-print("Endereço:", pessoa.get_endereco())
-print("Telefone:", pessoa.get_telefone())
-print("Email:", pessoa.get_email())
 
 # Chamada dos métodos setter
-pessoa.set_nome("José")
-pessoa.set_idade(35)
-pessoa.set_endereco("Rua B, 456")
-pessoa.set_telefone("9999-8888")
-pessoa.set_email("jose@example.com")
 
 # Chamada do método para adicionar hobbies
-pessoa.adicionar_hobby("Leitura")
-pessoa.adicionar_hobby("Caminhada")
-pessoa.adicionar_hobby("Música")
 
 # Chamada dos métodos getter atualizados
-print("Nome:", pessoa.get_nome())
-print("Idade:", pessoa.get_idade())
-print("Endereço:", pessoa.get_endereco())
-print("Telefone:", pessoa.get_telefone())
-print("Email:", pessoa.get_email())
 
 # Chamada do método para exibir os hobbies
-print("Hobbies:")
-pessoa.exibir_hobbies()
 
                                                 ###############
                                                 # Explicações #
