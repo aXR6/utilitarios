@@ -1,0 +1,80 @@
+class Pessoa:
+    def __init__(self, nome, idade, endereco):
+        self.nome = nome
+        self.idade = idade
+        self.endereco = endereco
+        self.telefone = None
+        self.email = None
+        self.hobbies = []
+
+    def get_nome(self):
+        return self.nome
+
+    def set_nome(self, novo_nome):
+        self.nome = novo_nome
+
+    def get_idade(self):
+        return self.idade
+
+    def set_idade(self, nova_idade):
+        self.idade = nova_idade
+
+    def get_endereco(self):
+        return self.endereco
+
+    def set_endereco(self, novo_endereco):
+        self.endereco = novo_endereco
+
+    def get_telefone(self):
+        return self.telefone
+
+    def set_telefone(self, novo_telefone):
+        self.telefone = novo_telefone
+
+    def get_email(self):
+        return self.email
+
+    def set_email(self, novo_email):
+        self.email = novo_email
+
+    def adicionar_hobby(self, hobby):
+        self.hobbies.append(hobby)
+
+    def remover_hobby(self, hobby):
+        self.hobbies.remove(hobby)
+
+    def exibir_hobbies(self):
+        for hobby in self.hobbies:
+            print(hobby)
+
+# Instanciação do objeto
+
+# Chamada dos métodos getter
+
+# Chamada dos métodos setter
+
+# Chamada do método para adicionar hobbies
+
+# Chamada dos métodos getter atualizados
+
+# Chamada do método para exibir os hobbies
+
+
+                                                ###############
+                                                # Explicações #
+                                                ###############
+
+# Neste exemplo, a classe Pessoa possui os atributos nome, idade, endereco, telefone, email e hobbies. 
+# Os métodos getter (get_nome(), get_idade(), get_endereco(), get_telefone(), get_email()) permitem acessar 
+# esses atributos, enquanto os métodos setter (set_nome(), set_idade(), set_endereco(), set_telefone(), set_email()) 
+# permitem modificá-los.
+
+# Além disso, a classe possui os métodos adicionar_hobby(), remover_hobby() e exibir_hobbies(), que permitem adicionar, 
+# remover e exibir os hobbies da pessoa.
+
+# Após a instanciação do objeto pessoa, são chamados os métodos getter para exibir os valores iniciais dos atributos. 
+# Em seguida, os métodos setter são chamados para atualizar os valores dos atributos.
+
+# Posteriormente, o método adicionar_hobby() é chamado para adicionar alguns hobbies à lista. Por fim, os métodos getter 
+# atualizados são chamados para exibir os valores atualizados dos atributos, e o método exibir_hobbies() é chamado para 
+# mostrar os hobbies da pessoa.
