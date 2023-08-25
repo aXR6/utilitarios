@@ -2,7 +2,7 @@
 Material de todas as aulas dos anos de:
  - 2022;
  - 2023;
-Envio de atividades/trabalhos: https://docs.google.com/forms/d/e/1FAIpQLSdR7kTiD9D8FQRYGDY2NmCWgjnwGs7IAIQr0DI0vQXQBDwYjw/viewform
+ - Envio de atividades/trabalhos: https://docs.google.com/forms/d/e/1FAIpQLSdR7kTiD9D8FQRYGDY2NmCWgjnwGs7IAIQr0DI0vQXQBDwYjw/viewform
 ```
 Acesse:
 Thalles Canela - TSC
