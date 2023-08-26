@@ -1,4 +1,4 @@
-![Untitled](https://github.com/aXR6/utilitarios/assets/9360245/5b9c51d8-0ba8-47a2-9f10-9c3f4b13ddde)# utilitarios
+# utilitarios
 Material de todas as aulas dos anos de:
  - 2022;
  - 2023;
