@@ -14,5 +14,4 @@ Fórum: https://forum.universodoti.com.br/
 
 # Envio de atividades/trabalhos:
  - https://docs.google.com/forms/d/e/1FAIpQLSdR7kTiD9D8FQRYGDY2NmCWgjnwGs7IAIQr0DI0vQXQBDwYjw/viewform
-
-![Untitled](https://github.com/aXR6/utilitarios/assets/9360245/a2875e51-0562-48b9-ad6c-ddbf1da6f242)
+![Untitled](https://github.com/aXR6/utilitarios/assets/9360245/1fcc2143-2b20-4e09-82df-b980cfdac38a)
