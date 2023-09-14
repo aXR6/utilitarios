@@ -18,6 +18,10 @@ void verificarParImpar(int num) {
 int main() {
     char frase[100];
     int numero;
+    //char frase = "Twste";
+    //int numero;
+    //numero = contarCaracteres(frase);
+    //printf (numero);
 
     // Coleta e processa uma string
     printf("Digite uma frase: ");
@@ -33,9 +37,7 @@ int main() {
     return 0;
 }
 
-
-
 // Neste código:
-
+//
 // A função 'contarCaracteres' é usada para calcular a quantidade de caracteres em uma string.
 // O procedimento 'verificarParImpar' é usado para determinar e exibir se um número é par ou ímpar.
