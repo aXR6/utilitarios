@@ -1,10 +1,14 @@
 #!/bin/bash
 
-# Criar um diretório para armazenar os logs baseado na data e hora
-DIR="./$(date +'%d-%m-%Y_%H-%M-%S')"
+# Defina a estrutura de diretórios com base na data e hora
+DIR="./logs/$(date +'%Y-%m-%d')"
+FILE="$DIR/$(date +'%H-%M-%S').log"
+
+# Crie o diretório se não existir
 mkdir -p "$DIR"
 
-exec &> "$DIR/log.txt"  # Redirecionar saída padrão e erros para o arquivo de log dentro do diretório criado
+# Redirecione a saída padrão e erros para o arquivo de log
+exec > "$FILE" 2>&1
 
 echo "==== INFORMAÇÕES DO SISTEMA ===="
 
