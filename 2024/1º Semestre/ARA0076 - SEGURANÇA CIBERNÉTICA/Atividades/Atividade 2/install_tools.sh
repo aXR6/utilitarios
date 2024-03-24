@@ -27,6 +27,7 @@ install_nmap() {
   if ! command -v nmap &> /dev/null; then
     echo "Instalando Nmap..."
     sudo apt install nmap -y
+    echo "Exemplo de uso do Nmap: nmap -sS 192.168.1.1"
   else
     echo "Nmap já está instalado."
   fi
@@ -37,6 +38,7 @@ install_wireshark() {
   if ! command -v wireshark &> /dev/null; then
     echo "Instalando Wireshark..."
     sudo apt install wireshark -y
+    echo "Exemplo de uso do Wireshark: wireshark -k -i eth0"
   else
     echo "Wireshark já está instalado."
   fi
@@ -47,18 +49,19 @@ install_metasploit() {
   if [ ! -d "/opt/metasploit-framework" ]; then
     install_git
     clone_repo "https://github.com/rapid7/metasploit-framework.git"
-    # A instalação pode variar dependendo do sistema, este é um exemplo
     cd "/opt/metasploit-framework" && sudo ./msf_install.sh
+    echo "Exemplo de uso do Metasploit: msfconsole"
   else
     echo "Metasploit Framework já está instalado em /opt."
   fi
 }
 
-# Função para instalar Burp Suite (Exemplo usando o instalador direto, ajuste conforme necessário)
+# Função para instalar Burp Suite
 install_burp() {
   if ! command -v burpsuite &> /dev/null; then
     echo "Instalando Burp Suite..."
     sudo apt install burpsuite -y
+    echo "Exemplo de uso do Burp Suite: Inicie o Burp Suite pela interface gráfica."
   else
     echo "Burp Suite já está instalado."
   fi
@@ -69,6 +72,7 @@ install_aircrack() {
   if ! command -v aircrack-ng &> /dev/null; then
     echo "Instalando Aircrack-ng..."
     sudo apt install aircrack-ng -y
+    echo "Exemplo de uso do Aircrack-ng: aircrack-ng -b [bssid] [capture file]"
   else
     echo "Aircrack-ng já está instalado."
   fi
@@ -79,6 +83,7 @@ install_sqlmap() {
   if ! command -v sqlmap &> /dev/null; then
     echo "Instalando Sqlmap..."
     sudo apt install sqlmap -y
+    echo "Exemplo de uso do Sqlmap: sqlmap -u 'http://example.com/vuln.php?id=1' --dbs"
   else
     echo "Sqlmap já está instalado."
   fi
@@ -89,6 +94,7 @@ install_john() {
   if ! command -v john &> /dev/null; then
     echo "Instalando John the Ripper..."
     sudo apt install john -y
+    echo "Exemplo de uso do John the Ripper: john --format=md5 myhashes.txt"
   else
     echo "John the Ripper já está instalado."
   fi
@@ -99,6 +105,7 @@ install_gobuster() {
   if ! command -v gobuster &> /dev/null; then
     echo "Instalando Gobuster..."
     sudo apt install gobuster -y
+    echo "Exemplo de uso do Gobuster: gobuster dir -u http://example.com -w /path/to/wordlist.txt"
   else
     echo "Gobuster já está instalado."
   fi
