@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Atualiza o repositório antes de começar
-sudo apt update
+apt update
 
 # Função para instalar o Git se não estiver instalado
 install_git() {
   if ! command -v git &> /dev/null; then
     echo "Instalando Git..."
-    sudo apt install git -y
+    apt install git -y
   fi
 }
 
@@ -16,7 +16,7 @@ clone_repo() {
   local repo_url="$1"
   local app_name="$(basename -s .git "$repo_url")"
   if [ ! -d "/opt/$app_name" ]; then
-    sudo git clone "$repo_url" "/opt/$app_name"
+    git clone "$repo_url" "/opt/$app_name"
   else
     echo "$app_name já está clonado em /opt."
   fi
@@ -26,7 +26,7 @@ clone_repo() {
 install_nmap() {
   if ! command -v nmap &> /dev/null; then
     echo "Instalando Nmap..."
-    sudo apt install nmap -y
+    apt install nmap -y
     echo "Exemplo de uso do Nmap: nmap -sS 192.168.1.1"
   else
     echo "Nmap já está instalado."
@@ -37,7 +37,7 @@ install_nmap() {
 install_wireshark() {
   if ! command -v wireshark &> /dev/null; then
     echo "Instalando Wireshark..."
-    sudo apt install wireshark -y
+    apt install wireshark -y
     echo "Exemplo de uso do Wireshark: wireshark -k -i eth0"
   else
     echo "Wireshark já está instalado."
@@ -49,7 +49,7 @@ install_metasploit() {
   if [ ! -d "/opt/metasploit-framework" ]; then
     install_git
     clone_repo "https://github.com/rapid7/metasploit-framework.git"
-    cd "/opt/metasploit-framework" && sudo ./msf_install.sh
+    cd "/opt/metasploit-framework" && ./msf_install.sh
     echo "Exemplo de uso do Metasploit: msfconsole"
   else
     echo "Metasploit Framework já está instalado em /opt."
@@ -60,7 +60,7 @@ install_metasploit() {
 install_burp() {
   if ! command -v burpsuite &> /dev/null; then
     echo "Instalando Burp Suite..."
-    sudo apt install burpsuite -y
+    apt install burpsuite -y
     echo "Exemplo de uso do Burp Suite: Inicie o Burp Suite pela interface gráfica."
   else
     echo "Burp Suite já está instalado."
@@ -71,7 +71,7 @@ install_burp() {
 install_aircrack() {
   if ! command -v aircrack-ng &> /dev/null; then
     echo "Instalando Aircrack-ng..."
-    sudo apt install aircrack-ng -y
+    apt install aircrack-ng -y
     echo "Exemplo de uso do Aircrack-ng: aircrack-ng -b [bssid] [capture file]"
   else
     echo "Aircrack-ng já está instalado."
@@ -82,7 +82,7 @@ install_aircrack() {
 install_sqlmap() {
   if ! command -v sqlmap &> /dev/null; then
     echo "Instalando Sqlmap..."
-    sudo apt install sqlmap -y
+    apt install sqlmap -y
     echo "Exemplo de uso do Sqlmap: sqlmap -u 'http://example.com/vuln.php?id=1' --dbs"
   else
     echo "Sqlmap já está instalado."
@@ -93,7 +93,7 @@ install_sqlmap() {
 install_john() {
   if ! command -v john &> /dev/null; then
     echo "Instalando John the Ripper..."
-    sudo apt install john -y
+    apt install john -y
     echo "Exemplo de uso do John the Ripper: john --format=md5 myhashes.txt"
   else
     echo "John the Ripper já está instalado."
@@ -104,7 +104,7 @@ install_john() {
 install_gobuster() {
   if ! command -v gobuster &> /dev/null; then
     echo "Instalando Gobuster..."
-    sudo apt install gobuster -y
+    apt install gobuster -y
     echo "Exemplo de uso do Gobuster: gobuster dir -u http://example.com -w /path/to/wordlist.txt"
   else
     echo "Gobuster já está instalado."
