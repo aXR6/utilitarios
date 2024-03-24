@@ -20,7 +20,7 @@ install_tools() {
         sudo ln -s /opt/packet-flooder/flood /usr/local/bin/flood
     fi
 }
-
+ 
 # Função para detectar a interface de rede em uso
 detect_network_interface() {
     IFACE=$(ip route | grep default | awk '{print $5}' | head -1)
