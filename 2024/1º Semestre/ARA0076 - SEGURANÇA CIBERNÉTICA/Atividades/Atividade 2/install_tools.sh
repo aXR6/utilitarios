@@ -28,7 +28,7 @@ install_setoolkit() {
     echo "Instalando Setoolkit..."
     install_git
     clone_repo "https://github.com/trustedsec/social-engineer-toolkit.git"
-    cd "/opt/social-engineer-toolkit" && pip install -r requirements.txt && python setup.py install
+    cd "/opt/social-engineer-toolkit" && pip install -r requirements.txt --break-system-packages && python setup.py install
     echo "Exemplo de uso do Setoolkit: setoolkit"
   else
     echo "Setoolkit já está instalado."
