@@ -22,6 +22,42 @@ clone_repo() {
   fi
 }
 
+# Função para instalar Setoolkit
+install_setoolkit() {
+  if ! command -v setoolkit &> /dev/null; then
+    echo "Instalando Setoolkit..."
+    install_git
+    clone_repo "https://github.com/trustedsec/social-engineer-toolkit.git"
+    cd "/opt/social-engineer-toolkit" && pip install -r requirements.txt && python setup.py install
+    echo "Exemplo de uso do Setoolkit: setoolkit"
+  else
+    echo "Setoolkit já está instalado."
+  fi
+}
+
+# Função para instalar Ettercap (Texto e Gráfico)
+install_ettercap() {
+  if ! command -v ettercap &> /dev/null; then
+    echo "Instalando Ettercap..."
+    apt install ettercap-common ettercap-text-only ettercap-graphical -y
+    echo "Exemplo de uso do Ettercap (Texto): ettercap -T -q -i eth0 -M arp:remote /gateway_ip/ /target_ip/"
+    echo "Exemplo de uso do Ettercap (Gráfico): ettercap -G"
+  else
+    echo "Ettercap já está instalado."
+  fi
+}
+
+# Função para instalar Nikto
+install_nikto() {
+  if ! command -v nikto &> /dev/null; then
+    echo "Instalando Nikto..."
+    apt install nikto -y
+    echo "Exemplo de uso do Nikto: nikto -h http://example.com"
+  else
+    echo "Nikto já está instalado."
+  fi
+}
+
 # Função para instalar Nmap
 install_nmap() {
   if ! command -v nmap &> /dev/null; then
@@ -122,7 +158,11 @@ while true; do
   echo "6. Sqlmap"
   echo "7. John the Ripper"
   echo "8. Gobuster"
-  echo "9. Sair"
+  echo "9. Setoolkit"
+  echo "10. Ettercap"
+  echo "11. Nikto"
+  echo "12. Sair"
+
   read -p "Opção: " opt
   
   case $opt in
@@ -134,7 +174,10 @@ while true; do
     6) install_sqlmap ;;
     7) install_john ;;
     8) install_gobuster ;;
-    9) echo "Saindo..."; break ;;
+    9) install_setoolkit ;;
+    10) install_ettercap ;;
+    11) install_nikto ;;
+    12) echo "Saindo..."; break ;;
     *) echo "Opção inválida!";;
   esac
 done
