@@ -29,10 +29,10 @@ echo "Instalando Amass..."
 sudo snap install amass
 
 # Baixar e instalar DirBuster
-echo "Baixando e instalando DirBuster..."
-wget https://downloads.sourceforge.net/project/dirbuster/DirBuster%20(OWASP%20ZAP)/1.0-RC1/DirBuster-1.0-RC1.zip -P "$base_dir"
-unzip "$base_dir/DirBuster-1.0-RC1.zip" -d "$base_dir"
-rm "$base_dir/DirBuster-1.0-RC1.zip"
+# echo "Baixando e instalando DirBuster..."
+# wget https://downloads.sourceforge.net/project/dirbuster/DirBuster%20(OWASP%20ZAP)/1.0-RC1/DirBuster-1.0-RC1.zip -P "$base_dir"
+# unzip "$base_dir/DirBuster-1.0-RC1.zip" -d "$base_dir"
+# rm "$base_dir/DirBuster-1.0-RC1.zip"
 
 # Baixar listas de palavras do SecLists para GOBUSTER e DirBuster
 echo "Baixando listas de palavras do SecLists..."
