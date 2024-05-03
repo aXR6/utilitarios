@@ -22,7 +22,7 @@ sudo apt-get install -y gobuster
 echo "Instalando Sublist3r..."
 git clone https://github.com/aboul3la/Sublist3r.git "$base_dir/Sublist3r"
 cd "$base_dir/Sublist3r"
-sudo pip3 install -r requirements.txt
+sudo pip3 install -r requirements.txt --break-system-packages
 
 # Instalar Amass
 echo "Instalando Amass..."
