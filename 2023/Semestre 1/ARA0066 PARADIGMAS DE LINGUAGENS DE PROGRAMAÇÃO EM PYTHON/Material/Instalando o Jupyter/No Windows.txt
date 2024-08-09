@@ -1,2 +1,0 @@
-Como instalar o Jupyter Notebook? (Windows e Linux)
-https://medium.com/horadecodar/como-instalar-o-jupyter-notebook-windows-e-linux-20701fc583c

@@ -1,2 +1,0 @@
-How to Install Jupyter Notebook on Ubuntu 20.04 LTS (Focal Fossa)
-https://www.cyberithub.com/how-to-install-jupyter-notebook-on-ubuntu-20-04-lts/

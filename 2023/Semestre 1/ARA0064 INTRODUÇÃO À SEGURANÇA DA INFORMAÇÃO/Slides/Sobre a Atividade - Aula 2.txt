@@ -1,6 +1,0 @@
-- Data da entrega: 23/03
-- Formato do documento: PDF
-- Documento formal da faculdade (modelo artigo);
-- Objetivo: Cada grupo promoverá um debate documentado.
-            É preciso que seja registrado o pensamento/posicionamento de cada um com relação ao tema.
-- Como será a entrega: Entregar para o aluno Lorran Silva.
